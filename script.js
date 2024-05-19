@@ -10,9 +10,15 @@ const amountPeople = document.querySelector('.amountPeople');
 
 const reset = document.querySelector('.reset__button');
 
-const mq = window.matchMedia('(max-width:700px)');
+const mq = window.matchMedia('(max-width:600px)');
 
 const output = document.querySelector('.output');
+
+const handleMq = event => {
+  if (event.matches) {
+    output.style.marginTop = '50rem';
+  }
+};
 
 let value = 0;
 
@@ -26,11 +32,7 @@ buttons.forEach(button =>
     if (billInput.value === '' || peopleInput.value === '') {
       document.querySelector('.input__bill__input__icon').style.top = '20%';
 
-      mq.addListener(event => {
-        if (event.matches) {
-          output.style.marginTop = '5000px';
-        }
-      });
+      handleMq(mq);
     } else {
       errorMessage.style.display = 'none';
       functionality();
