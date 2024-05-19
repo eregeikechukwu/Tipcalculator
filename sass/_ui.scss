@@ -154,10 +154,10 @@
     font-size: 300%;
   }
   &__icon {
-    scale: 200%;
+    scale: 140%;
     position: absolute;
     top: 50%;
-    transform: translateY(-25%);
+    transform: translateY(-31%);
     left: -20%;
     @media only screen and (max-width: $bp-pad) {
       top: 50%;
