@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/main.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo"><img src="images/logo.svg" alt="" /></div>
+
+      <div class="ui">
+        <div class="ui__container">
+          <div class="input">
+            <div class="input__bill">
+              <p class="input__bill__text input--text">Bill</p>
+              <div class="input__bill__input">
+                <img
+                  src="images/icon-dollar.svg"
+                  class="input__bill__input__icon"
+                  alt="dolllar icon"
+                />
+                <input type="number" class="inputs billInput" placeholder="0" />
+                <div class="errorMessage" style="display: none; color: red">
+                  Please fill out this input field
+                </div>
+              </div>
+            </div>
+
+            <div class="select-tip">
+              <p class="select-tip__text input--text">Select tip %</p>
+
+              <div class="select-tip__buttons">
+                <button class="select-tip__button button1" value="5">5%</button>
+                <button class="select-tip__button button2" value="10">
+                  10%
+                </button>
+                <button class="select-tip__button button3" value="15">
+                  15%
+                </button>
+                <button class="select-tip__button button4" value="25">
+                  25%
+                </button>
+                <button class="select-tip__button button5" value="50">
+                  50%
+                </button>
+                <button class="select-tip__button--custom select-tip__button">
+                  Custom
+                </button>
+              </div>
+            </div>
+
+            <div class="input__person">
+              <p class="input__person__text input--text">Number of people</p>
+              <div class="input__person__input input__person__input--p">
+                <img
+                  src="images/icon-person.svg"
+                  class="input__bill__input__icon dolllar"
+                  alt="dolllar icon"
+                />
+                <input
+                  type="number"
+                  class="inputs inputPeople"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="output">
+            <div class="output__container--main">
+              <div class="output__container">
+                <div class="output__container__stats">
+                  <p class="info p">Tip Amount</p>
+                  <p class="person">/ person</p>
+                </div>
+                <span class="amount">
+                  <img
+                    src="images/icon-dollar2.svg"
+                    class="amount__icon dolllar"
+                    alt="dolllar icon"
+                  />
+                  <p class="amountTip">0.00</p>
+                </span>
+              </div>
+
+              <div class="output__container">
+                <div class="output__container__stats">
+                  <p class="info p">Total</p>
+                  <p class="person">/ person</p>
+                </div>
+                <span class="amount">
+                  <img
+                    src="images/icon-dollar2.svg"
+                    class="amount__icon dolllar"
+                    alt="dolllar icon"
+                  />
+                  <p class="amountPeople">0.00</p>
+                </span>
+              </div>
+            </div>
+            <div class="reset">
+              <button class="reset__button">RESET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

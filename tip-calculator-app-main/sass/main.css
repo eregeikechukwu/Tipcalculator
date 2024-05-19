@@ -1,0 +1,387 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 75rem) {
+  html,
+  body {
+    font-size: 30%;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 37.5rem) {
+  body {
+    background-image: linear-gradient(180deg, hsl(185, 41%, 84%) 0%, hsl(185, 41%, 84%) 30%, hsl(0, 0%, 100%) 20%);
+  }
+}
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  gap: 6%;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.logo {
+  scale: 60%;
+}
+@media only screen and (max-width: 37.5rem) {
+  .logo {
+    height: 40rem;
+    scale: 80%;
+    margin-top: 6rem;
+  }
+}
+
+.ui {
+  height: 65%;
+  width: 50%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2.3%;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 75rem) {
+  .ui {
+    height: 1000%;
+    width: 65%;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    padding-top: 10%;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .ui {
+    height: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 9%;
+  }
+}
+.ui__container {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4.5%;
+}
+@media only screen and (max-width: 37.5rem) {
+  .ui__container {
+    height: 80rem;
+    width: 110vw;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border-radius: 6%;
+  grid-gap: 10%;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  font-size: 290%;
+  color: hsl(183, 100%, 15%);
+}
+@media only screen and (max-width: 75rem) {
+  .input {
+    grid-gap: 4%;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .input {
+    grid-gap: 2%;
+    width: 80%;
+    margin-right: 27%;
+    align-items: center;
+    align-self: center;
+    grid-gap: 19%;
+  }
+}
+
+.output {
+  background-color: hsl(183, 100%, 15%);
+  width: 100%;
+  border-radius: 6%;
+  height: 100%;
+  padding: 10%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.output__container--main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-betweens;
+  gap: 3rem;
+}
+.output__container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 37.5rem) {
+  .output {
+    width: 82%;
+    margin-top: 29rem;
+    margin-left: -3.8%;
+    z-index: 5;
+  }
+}
+
+.info {
+  font-size: 2rem;
+  color: white;
+}
+@media only screen and (max-width: 75rem) {
+  .info {
+    font-size: 3rem;
+  }
+}
+
+.person {
+  font-size: 1.6rem;
+  color: hsl(186, 14%, 43%);
+}
+@media only screen and (max-width: 75rem) {
+  .person {
+    font-size: 2rem;
+  }
+}
+
+.amount {
+  font-size: 700%;
+  color: hsl(172, 67%, 45%);
+  position: relative;
+  align-items: center;
+}
+@media only screen and (max-width: 75rem) {
+  .amount {
+    font-size: 300%;
+  }
+}
+.amount__icon {
+  scale: 200%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25%);
+  left: -20%;
+}
+@media only screen and (max-width: 75rem) {
+  .amount__icon {
+    top: 50%;
+    transform: translateY(-35%);
+    left: -20%;
+    scale: 140%;
+  }
+}
+
+.input__bill,
+.input__person {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.5%;
+}
+@media only screen and (max-width: 75rem) {
+  .input__bill__text,
+  .input__person__text {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .input__bill__text,
+  .input__person__text {
+    font-size: 5rem;
+  }
+}
+.input__bill__input,
+.input__person__input {
+  position: relative;
+}
+@media only screen and (max-width: 37.5rem) {
+  .input__bill__input--p,
+  .input__person__input--p {
+    margin-bottom: 75rem;
+  }
+}
+.input__bill__input__icon,
+.input__person__input__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+}
+
+.inputs {
+  width: 100%;
+  height: 6rem;
+  outline: none;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+  font-size: 4rem;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+}
+.inputs ::-moz-placeholder {
+  color: hsl(186, 14%, 43%);
+}
+.inputs ::placeholder {
+  color: hsl(186, 14%, 43%);
+}
+@media only screen and (max-width: 75rem) {
+  .inputs {
+    font-size: 3.5rem;
+    height: 9rem;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .inputs {
+    padding-right: 3%;
+  }
+}
+
+.select-tip {
+  color: hsl(183, 100%, 15%);
+  height: 100%;
+}
+.select-tip__button {
+  width: 100%;
+  height: 65%;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  background-color: hsl(183, 100%, 15%);
+  font-size: 90%;
+  transition: all 0.2s;
+  margin: 0;
+}
+.select-tip__button:hover {
+  background-color: hsl(183, 56%, 37%);
+}
+.select-tip__button:active {
+  background-color: hsl(183, 90%, 25%);
+}
+@media only screen and (max-width: 37.5rem) {
+  .select-tip__button {
+    height: 11rem;
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 75rem) {
+  .select-tip__text {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .select-tip__text {
+    font-size: 5rem;
+  }
+}
+.select-tip__buttons {
+  display: grid;
+  grid-column-gap: 5%;
+  grid-row-gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+  height: 120%;
+}
+@media only screen and (max-width: 75rem) {
+  .select-tip__buttons {
+    font-size: 2.5rem;
+    grid-gap: 5%;
+    grid-row-gap: 4rem;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .select-tip__buttons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.2rem;
+  }
+}
+
+.select-tip__button--custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+
+.reset {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.reset__button {
+  align-self: end;
+  width: 100%;
+  height: 30%;
+  background-color: hsl(183, 76%, 32%);
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.reset__button:hover {
+  background-color: hsl(183, 67%, 38%);
+}
+.reset__button:active {
+  background-color: hsl(183, 62%, 24%);
+}
+
+@media only screen and (max-width: 37.5rem) {
+  .errorMessage {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
