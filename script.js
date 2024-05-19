@@ -16,7 +16,7 @@ const output = document.querySelector('.output');
 
 const handleMq = event => {
   if (event.matches) {
-    output.style.marginTop = '48rem';
+    output.style.marginTop = '53rem';
   }
 };
 
