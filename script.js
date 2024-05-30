@@ -42,15 +42,31 @@ buttons.forEach(button =>
 );
 
 const functionality = function () {
-  const total = parseFloat(billInput.value) * parseFloat(peopleInput.value);
-  //   console.log(total);
-  const tip = total * (value / 100);
-  console.log(tip);
-  amountTip.textContent = tip.toFixed(2);
+  // const total = parseFloat(billInput.value) * parseFloat(peopleInput.value);
+  // //   console.log(total);
+  // const tip = total * (value / 100);
+  // console.log(tip);
+ 
 
-  const totalWT = tip + total;
-  console.log(totalWT);
-  amountPeople.textContent = totalWT.toFixed(2);
+  const gBill = parseFloat(billInput.value)
+  const indi = parseFloat(peopleInput.value);
+
+  const tip = gBill * (value / 100)
+
+  const iBill = (gBill - tip) / indi;
+
+  const iTip = tip / indi;
+
+  const totalWT = iTip + iBill;
+
+   amountTip.textContent = iTip.toFixed(2);
+
+  // const totalWT = tip + total;
+  // console.log(totalWT);
+   amountPeople.textContent = totalWT.toFixed(2);
+
+
+
 };
 
 reset.addEventListener('click', function () {
@@ -61,3 +77,5 @@ reset.addEventListener('click', function () {
   errorMessage.style.display = 'none';
   document.querySelector('.input__bill__input__icon').style.top = '50%';
 });
+
+// G-JL0HRBBSLX
